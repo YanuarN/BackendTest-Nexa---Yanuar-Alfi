@@ -2,13 +2,6 @@
 
 This project is a RESTful API built with Node.js that implements JWT-based authentication. It allows users to register and log in.
 
-## Features
-
-- User Registration
-- User Login with JWT authentication
-- Secure password hashing using `bcryptjs`
-- Environment variable support with `.env`
-
 ## Technologies Used
 
 - **Node.js**: JavaScript runtime
