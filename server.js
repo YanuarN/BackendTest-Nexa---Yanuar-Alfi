@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
-const UserRoutes = require('./routes/user')
+const AdminRouter = require('./routes/admin')
+const cookieParser = require('cookie-parser')
 require('dotenv').config();
 
 const app = express()
@@ -9,10 +10,11 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser())
 
 
 // User routes
-app.use('/', UserRoutes())
+app.use('/admin', AdminRouter)
 
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => {
